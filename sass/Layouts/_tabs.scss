@@ -1,0 +1,57 @@
+.tabs{
+   background:  url(../img/pattern-2.png) center/cover no-repeat;
+   padding: 5rem 0;
+   &-item{
+      .nav-link{
+       font-size: $fz-36 + 4;
+     }
+       .nav-link.active{
+           position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -20%;
+                transform: translateX(-50%);
+                border-style: solid;
+                border-width: 12px;
+                border-color:  $white transparent transparent transparent;
+
+       }
+        }
+   }
+&-details{
+    
+    padding: 2rem 0;
+  }
+    &-subheading{
+        @include styleText($fz-14 , $fw-400 ,$gray-p);
+        letter-spacing: 2px;
+  }
+    &-heading{
+        @include styleText ($fz-32 , $fw-400 ,$black-dark);
+  }
+    &-desc{
+        margin-top: 36px;
+        font-size: $fz-16;
+        line-height: 1.8;
+        text-align: justify;
+  }
+  @include responsive("large"){
+    &-item{
+      .nav-link{
+       width: 100%;
+     }
+  }
+  }
+  @include responsive("medium"){
+    &-item{
+      .nav-link{
+       width: 100%;
+     }
+  }
+  }
+
+ 
+ 
+}

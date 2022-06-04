@@ -1,0 +1,31 @@
+
+.feedback {
+
+  &-info{
+    width: 60%;
+    margin: 16px auto;
+    text-align: center;
+}
+  &-img{
+    width: 100px;
+    margin: 0 auto;
+    img{
+        border-radius: 50%;
+        width: 100%;
+        display: block;
+    }
+}
+  &-opinion{
+    margin: 32px 0;
+    font-style: italic;
+    line-height: 2;
+}
+  &-name{
+    @include styleText($fz-16, $fw-400 ,$black-light);
+    letter-spacing:2px ;
+    span{
+       @include styleText($fz-12 , $fw-400 ,#7f7f7f);
+       display: block;
+    }
+}
+}

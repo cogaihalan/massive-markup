@@ -1,0 +1,93 @@
+.footer{
+    background-color: $black-light;
+    padding-top: 3.5rem;
+    &-heading{
+        @include styleText($fz-16 , $fw-400 , $white);
+        margin-bottom: 32px;
+    }
+    &-list{
+        // padding: 1rem;
+        li:not(:last-child){
+            border-bottom:  1px solid $black-heading;
+            margin-bottom:24px;
+            
+        }
+    }
+    &-item{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-start;
+        @include styleText($fz-14 , $fw-400 , $gray-footer) ;
+        text-transform: unset;
+        i{
+            font-size: $fz-12;
+        }
+        &:hover{
+            color: $yellow-primary;
+        }
+    }
+    &-recent-work{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    &-img{
+        width: 60px;
+        height: 60px;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &-bottom{
+        background-color: #1b1b1b;
+        margin-top: 32px;
+        border-top: 1px solid #2c2c2c;
+        padding:  2.5rem;
+        &-content{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+    }
+    &-copyright{
+        span{
+            color: $white;
+            &:hover{
+                color: $yellow-primary;
+            }
+        }
+    }
+    &-links{
+        display: flex;
+        gap: 16px;
+    }
+    &-link{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 50%;
+        color: $gray;
+        font-size: $fz-18 + 2 ; 
+        border: 1px solid $gray;
+        &:hover{
+            color: #fff;
+            border: 1px solid transparent;
+            background-color: #5a5a5a;
+        }
+    }
+    @include responsive("large"){
+        &-bottom{
+            &-content{
+                display: flex;
+                // justify-content:flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    }
+}

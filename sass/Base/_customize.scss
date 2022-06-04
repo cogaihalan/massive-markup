@@ -1,0 +1,88 @@
+.heading {
+  text-align: center;
+  margin: 3.5rem 0 4.5rem;
+  h2 {
+    @include styleText($fz-28 - 2, $fw-400, $black-heading);
+    margin-bottom: 32px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -35%;
+      display: block;
+      width: 80px;
+      height: 2px;
+      background-color: #595959;
+    }
+  }
+  p {
+    width: 70%;
+    margin: 0 auto;
+    @include styleText($fz-14, $fw-400, $gray-p);
+    line-height: 1.8;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  top: 0;
+  right: 0;
+  @include responsive("medium") {
+    display: none;
+  }
+}
+
+.progress {
+  overflow: visible;
+  background-color: #000000;
+}
+.progress-bar {
+  overflow: visible;
+  flex-direction: row;
+  text-align: left;
+  justify-content: initial;
+  padding-left: 8px;
+  background-color: $white;
+  color: $black-light;
+  border-radius: 4px;
+}
+
+.nav-pills {
+  gap: 24px;
+  @media  screen and (min-width : 992px) and  (max-width : 1120px) {
+    gap: 10px;   
+  }
+  .nav-link {
+    color: #434343;
+    background-color: rgba($color: #343434, $alpha: 0.05);
+    padding: 36px 72px;
+    font-size: $fz-32;
+  }
+
+  .nav-link.active {
+    background-color: $white;
+    color: $black-light;
+  }
+  @include responsive("large"){
+    .nav-link{
+      gap: 16px;
+      padding: 24px 40px;
+     
+    }
+  }
+  @include responsive("medium"){
+      flex-direction: column;
+
+  }
+}
+.navbar-toggler {
+  color: $white;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.05rem;
+}

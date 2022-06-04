@@ -1,0 +1,30 @@
+.team{
+    &__member{
+        position: relative;
+        padding: 1rem;
+        &-img{
+            position: relative;
+            img{
+                width: 100%;
+            }
+        }
+        &-info{
+            position: absolute;
+            right: 0;
+            bottom: 10%;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            text-align: right;
+            width: 70%;
+            padding: 12px 20px;
+            h3{
+                @include styleText($fz-16 , $fw-400 ,$white) ;
+                margin-bottom: 0;
+            }
+            span{
+                @include styleText($fz-18 , $fw-600 ,$white);
+            }
+        }
+        
+    }
+}
+

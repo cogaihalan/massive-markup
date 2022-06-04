@@ -1,0 +1,62 @@
+.effect{
+    background: url(../img/parallax/8.jpg) center/cover no-repeat;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    &-subheading{
+        @include styleText($fz-18, $fw-400 ,$yellow-primary);
+        letter-spacing: 3px ;
+    }
+    &-heading{
+        @include styleText($fz-36 + 2 ,$fw-400 ,$white);
+        margin: 12px 0 48px;
+        padding: 0 12px;
+    }
+    &-button.button{
+        background-color: $yellow-primary;
+        padding: 16px 24px;
+        &:hover{
+            background-color: $white;
+            color: $black-dark;
+        }
+    }
+    @include responsive('large'){
+        &-subheading{
+            @include styleText($fz-16, $fw-400 ,$yellow-primary);
+        }
+        &-heading{
+            @include styleText($fz-36 ,$fw-400 ,$white);
+            margin: 12px 0 36px;
+        }
+        &-button.button{
+            
+            padding: 12px 24px;
+           
+        }
+    }
+    @include responsive('medium'){
+        &-subheading{
+            @include styleText($fz-16, $fw-400 ,$yellow-primary);
+        }
+        &-heading{
+            @include styleText($fz-32 ,$fw-400 ,$white);
+            margin: 12px 0 32px;
+        }
+    }
+    @include responsive('small'){
+        &-subheading{
+            @include styleText($fz-14, $fw-400 ,$yellow-primary);
+        }
+        &-heading{
+            @include styleText($fz-28 ,$fw-400 ,$white);
+            
+        }
+    }
+}

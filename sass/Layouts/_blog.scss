@@ -1,0 +1,79 @@
+.blog {
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  &-image-desc {
+    position: absolute;
+    bottom: 0;
+    padding: 8px 12px;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    p {
+      @include styleText($fz-16, $fw-400, $white);
+    }
+  }
+  &-details {
+    padding: 2rem;
+    color: $white;
+  }
+  &-list {
+    display: flex;
+    gap: 12px;
+  }
+  &-item {
+    @include styleText($fz-14, $fw-400, $gray-light);
+    &:hover {
+      color: $yellow-primary;
+    }
+  }
+  &-title {
+    @include styleText($fz-18, $fw-400, $black-light);
+    display: block;
+    margin: 10px 0;
+    &:hover {
+      color: $yellow-primary;
+    }
+  }
+  &-info {
+    color: $gray-light;
+    font-size: $fz-14;
+  }
+  &-author {
+    color: $gray-light;
+    margin-right: 12px;
+    position: relative;
+    &::after {
+      padding-left: 8px;
+
+      content: "|";
+    }
+    &:hover {
+      color: $yellow-primary;
+    }
+  }
+  &-desc {
+    margin: 16px 0;
+    @include styleText($fz-16, $fw-400, $gray-p);
+    line-height: 1.8;
+  }
+  &-more {
+    color: $white-thin;
+    &:hover {
+      color: $black-dark;
+    }
+  }
+
+  @include responsive("large") {
+    &-details {
+      padding: 0;
+    }
+    &-desc {
+      @include styleText($fz-14, $fw-400, $gray-p);
+    }
+  }
+}

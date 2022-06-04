@@ -1,0 +1,37 @@
+.jobs{
+    padding: 0 28px ;
+    margin-bottom: 3.5rem;
+    &-content{
+        background-color: #f5f5f5;
+    }
+    &-row{
+        align-items: center;
+        padding: 1.25rem;
+    }
+    &-noti{
+        @include styleText($fz-18 + 2 , $fw-400 ,$black-dark);
+        span{
+            color: $yellow-primary;
+        }
+        margin-bottom: 1rem;
+    }
+    &-desc{
+        @include styleText($fz-14 , $fw-400 ,$gray-p);
+    }
+    &-btn.button{
+        padding: 16px 28px;
+        display: block;
+        margin-left: auto;
+        &:hover{
+            background-color: $yellow-primary;
+        }
+    }
+    @include responsive("medium"){
+        &-btn.button{
+            padding: 12px 20px;
+            font-size: $fz-14;
+            margin-left: 0;
+            
+        }
+    }
+}

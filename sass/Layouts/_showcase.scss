@@ -1,0 +1,75 @@
+
+.showcase {
+
+  &-filter{
+      margin-bottom: 24px;
+    .button-group{
+        display: flex;
+        gap: 36px;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include responsive("medium"){
+            gap: 16px;
+        }
+    }
+    &-item{
+        outline: none;
+        border: none;
+        @include styleText($fz-16 , $fw-400 ,$white-filter);
+        background-color: transparent;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        &.active{
+            color: $black-light;
+        }
+        @include responsive("medium"){
+            font-size: $fz-16;
+        }
+        @include responsive("small"){
+            font-size: $fz-12;
+        }
+    }
+}
+  &-item{
+    width: 24.98%;
+    .thumb{
+        position: relative;
+    }
+}
+  &-item-img{
+      width: 100%;
+      position: relative;
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+
+      }
+}
+.card-links{
+    gap: 8px;
+}
+.card-link,
+.card-heading{
+    &:hover{
+        color: $yellow-primary;
+    }
+    }
+    
+    @include responsive("large"){
+        &-item{
+            width: 33.33333%;
+        }
+    }
+    @include responsive("medium"){
+        &-item{
+            width: 50%;
+        }
+    }
+    @include responsive("small"){
+        &-item{
+            width: 100%;
+        }
+    }
+}
+

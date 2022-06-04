@@ -1,0 +1,18 @@
+@mixin styleText($fz , $fw , $color ){
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+}
+
+
+@mixin responsive($breakpoint){
+    @if map-has-key($map: $breakpoints , $key: $breakpoint ){
+        $value : map-get($map: $breakpoints , $key: $breakpoint ); 
+        @media screen and (max-width: $value) {
+            @content
+        }
+    }
+    @else{
+        @warn "`{$breapoints}` isn't in breakpoints "
+    }
+}

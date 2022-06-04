@@ -1,0 +1,85 @@
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    width: 100%;
+   
+    @include responsive('large'){
+        .navbar-brand{
+            width: 100px;
+        
+        }
+        .navbar-nav{
+            background-color: $white;
+            text-align: left;
+            margin-right: 0;
+            gap: 8px;
+            .nav-item{
+                border-bottom: 1px solid $gray-p;
+            }
+            .nav-link{
+                color: $black-dark;
+                padding-left: 1.5rem ;
+                font-size: $fz-12;
+            }
+            .nav-link.active{
+                color: $yellow-primary;
+                
+            }
+        }
+
+    }
+    &__navbar{
+        margin-left: auto;
+        margin-right: 24px;
+        gap: 20px;
+        &-item{ 
+            font-size: $fz-14 - 1;
+            color: $white;
+            &:nth-child(7){
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 1px;
+                    height: 18px;
+                    background-color: $white;
+                    right: -20%;
+                    top: 30%;
+                    transform: translateX(-50%);
+                }
+            }
+           
+            .nav-link{
+                color: $white;
+                white-space: nowrap;
+                &:hover{
+                    color: $yellow-primary;
+                }
+                i{
+                    margin-right: 4px;
+                }
+            }
+            .nav-link.active{
+                color: $yellow-primary;
+            }
+
+        }
+        
+    }
+    @media screen and (min-width : 993px) and (max-width : 1050px){
+            &-navbar{
+            
+                &-item{
+                    font-size: $fz-12;
+                    
+                }
+            }
+    }
+}
+
+

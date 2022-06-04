@@ -1,0 +1,16 @@
+.stats{
+   background-color: $black-dark;
+   text-align: center; 
+   &-item{
+        gap: 12px;
+        align-items: center;
+        display: flex;
+        color: $white;
+        font-size: 32px;
+        justify-content: center;
+        margin-bottom: 12px;
+   }
+   &-name{
+       @include styleText($fz-18, $fw-400 ,$white);
+   }
+}

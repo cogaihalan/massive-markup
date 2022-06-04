@@ -1,0 +1,55 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  letter-spacing: 1px;
+  transition: all 0.3s linear;
+}
+::selection {
+  color: #fff;
+  background: #d6b161;
+  text-shadow: none;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: $black-dark;
+  background-color: #fff;
+}
+p {
+  margin: 0;
+  padding: 0;
+  color: $gray-p;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.section {
+  padding: 3.5rem 0;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+i{
+  transition: all 0.3s linear;
+}

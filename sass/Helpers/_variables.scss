@@ -1,0 +1,44 @@
+// Colors
+
+$black-dark: #323232;
+$black-light: #222;
+
+$black-heading: #333;
+$dark-border: rgba(0, 0, 0, 0.1);
+
+$white: #fff;
+$white-thin : #bbb ;
+$white-filter: #a9a8a8 ;
+$yellow-primary: #d6b161;
+$gray-p: #7e7e7e;
+$gray-light: #909090;
+$gray-role: #7f7f7f;
+$gray-back: rgba(255, 255, 255, 0.5);
+$gray : #5a5a5a ;
+$gray-footer: #a2a2a2 ;
+
+// Font Size
+$fz-36: 36px;
+$fz-12: 12px;
+$fz-14: 14px;
+$fz-16: 16px;
+$fz-18: 18px;
+$fz-24: 24px;
+$fz-28: 28px;
+$fz-48: 48px;
+$fz-32: 32px;
+$fz-60: 60px;
+// Font-Weight
+$fw-300: 300;
+$fw-400: 400;
+$fw-600: 600;
+$fw-700: 700;
+
+// Breakpoints
+
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);
